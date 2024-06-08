@@ -1,18 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int n,count,sum;
+  
+    int n,i,sum,flag;
     scanf("%d",&n);
-    count=1;
+    i=1;
     sum=0;
-    while(count<=n)
+    flag=0;
+    while(i<=n)
     {
-        if(count%2==0)
+        if(i%2==0)
         {
-            printf("+%d",count);
-        sum=sum+count;
+            if(flag==0){
+            printf("%d",i);
+            flag=1;
+            }
+            else {
+                printf("+%d",i);
+            }
+        sum=sum+i;
         }
-           count++;
+           i++;
     }
         printf("=%d",sum);
     return 0;
