@@ -1,0 +1,14 @@
+#include <stdio.h>
+void display(int m)
+{
+    if(m==0)
+    return;
+    printf("%d ",m);
+    display(m-1);
+}
+void main() 
+{
+    int n;
+    scanf("%d",&n);
+    display(n);
+}
