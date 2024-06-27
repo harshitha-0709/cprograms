@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+int amg(int);
+int amg(int n){
+    int r,temp,sum,d;
+    temp=n;
+    sum=0;
+    d=(int)log10(n)+1;
+    while(n!=0){
+        r=n%10;
+        sum=sum+(int)pow(r,d);
+        n=n/10;
+    }
+    if(temp==sum){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+    }
+int main(){
+int n,i;
+scanf("%d", &n);
+for(i=0;i<=n;i++){
+if(amg(i)){
+    printf("%d ",i);
+}
+}
+}
